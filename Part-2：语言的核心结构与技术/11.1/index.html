@@ -2852,7 +2852,7 @@
 <p>（按照约定，只包含一个方法的）接口的名字由方法名加 <code>[e]r</code> 后缀组成，例如 <code>Printer</code>、<code>Reader</code>、<code>Writer</code>、<code>Logger</code>、<code>Converter</code> 等等。还有一些不常用的方式（当后缀 <code>er</code> 不合适时），比如 <code>Recoverable</code>，此时接口名以 <code>able</code> 结尾，或者以 <code>I</code> 开头（像 <code>.NET</code> 或 <code>Java</code> 中那样）。</p>
 <p>Go 语言中的接口都很简短，通常它们会包含 0 个、最多 3 个方法。</p>
 <p>不像大多数面向对象编程语言，在 Go 语言中接口可以有值，一个接口类型的变量或一个 <strong>接口值</strong> ：<code>var ai Namer</code>，<code>ai</code> 是一个多字（multiword）数据结构，它的值是 <code>nil</code>。它本质上是一个指针，虽然不完全是一回事。指向接口值的指针是非法的，它们不仅一点用也没有，还会导致代码错误。</p>
-<p><img alt="" src="images/11.1_fig11.1.jpg?raw=true" /></p>
+<p><img alt="" src="../images/11.1_fig11.1.jpg?raw=true" /></p>
 <p>此处的方法指针表是通过运行时反射能力构建的。</p>
 <p>类型（比如结构体）可以实现某个接口的方法集；这个实现可以描述为，该类型的变量上的每一个具体方法所组成的集合，包含了该接口的方法集。实现了 <code>Namer</code> 接口的类型的变量可以赋值给 <code>ai</code>（即 <code>receiver</code> 的值），方法表指针（method table ptr）就指向了当前的方法实现。当另一个实现了 <code>Namer</code> 接口的类型的变量被赋给 <code>ai</code>，<code>receiver</code> 的值和方法表指针也会相应改变。</p>
 <p><strong>类型不需要显式声明它实现了某个接口：接口被隐式地实现。多个类型可以实现同一个接口</strong>。</p>

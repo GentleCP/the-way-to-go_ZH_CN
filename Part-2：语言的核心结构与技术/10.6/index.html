@@ -3461,7 +3461,7 @@ It works like a Phone too: Ring Ring
 <p>在如 C++、Java、C# 和 Ruby 这样的面向对象语言中，方法在类的上下文中被定义和继承：在一个对象上调用方法时，运行时会检测类以及它的超类中是否有此方法的定义，如果没有会导致异常发生。</p>
 <p>在 Go 语言中，这样的继承层次是完全没必要的：如果方法在此类型定义了，就可以调用它，和其他类型上是否存在这个方法没有关系。在这个意义上，Go 具有更大的灵活性。</p>
 <p>下面的模式就很好的说明了这个问题：</p>
-<p><img alt="" src="images/10.6.9_fig10.4.jpg?raw=true" /></p>
+<p><img alt="" src="../images/10.6.9_fig10.4.jpg?raw=true" /></p>
 <p>Go 不需要一个显式的类定义，如同 Java、C++、C# 等那样，相反地，“类”是通过提供一组作用于一个共同类型的方法集来隐式定义的。类型可以是结构体或者任何用户自定义类型。</p>
 <p>比如：我们想定义自己的 <code>Integer</code> 类型，并添加一些类似转换成字符串的方法，在 Go 中可以如下定义：</p>
 <div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">Integer</span> <span class="kt">int</span>

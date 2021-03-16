@@ -2980,7 +2980,7 @@
 <h2 id="763">7.6.3 字符串和切片的内存结构<a class="headerlink" href="#763" title="Permanent link">&para;</a></h2>
 <p>在内存中，一个字符串实际上是一个双字结构，即一个指向实际数据的指针和记录字符串长度的整数（见图 7.4）。因为指针对用户来说是完全不可见，因此我们可以依旧把字符串看做是一个值类型，也就是一个字符数组。</p>
 <p>字符串 <code>string s = "hello"</code> 和子字符串 <code>t = s[2:3]</code> 在内存中的结构可以用下图表示：</p>
-<p><img alt="" src="images/7.6_fig7.4.png" /></p>
+<p><img alt="" src="../images/7.6_fig7.4.png" /></p>
 <h2 id="764">7.6.4 修改字符串中的某个字符<a class="headerlink" href="#764" title="Permanent link">&para;</a></h2>
 <p>Go 语言中的字符串是不可变的，也就是说 <code>str[index]</code> 这样的表达式是不可以被放在等号左侧的。如果尝试运行 <code>str[i] = 'D'</code> 会得到错误：<code>cannot assign to str[i]</code>。</p>
 <p>因此，您必须先将字符串转换成字节数组，然后再通过修改数组中的元素值来达到修改字符串的目的，最后将字节数组转换回字符串格式。</p>

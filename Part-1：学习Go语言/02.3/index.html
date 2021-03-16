@@ -2884,7 +2884,7 @@ sudo mv go $GOROOT
 
 <p><strong>编译注意事项</strong></p>
 <p>编译时如果出现如下报错：</p>
-<p><img alt="" src="images/2.3.allbasherror.png?raw=true" /></p>
+<p><img alt="" src="../images/2.3.allbasherror.png?raw=true" /></p>
 <p>可能是因为 <code>$GOROOT_BOOTSTRAP</code> 变量没有设置。这个目录在安装 Go 1.5 版本及之后的版本时需要设置。</p>
 <p>由于在 1.4 版本后，Go 编译器实现了自举，即通过 1.4 版本来编译安装之后版本的编译器。如果不设置该环境变量的话，会产生这样一个错误 <code>Set $GOROOT_BOOTSTRAP to a working Go tree &gt;= Go 1.4.</code> 。</p>
 <p>设置 <code>$GOROOT_BOOTSTRAP</code> 变量：</p>
@@ -2907,7 +2907,7 @@ git checkout -b release-branch.go1.4 origin/release-branch.go1.4
 </code></pre></div>
 
 <p>在完成编译之后（通常在 1 分钟以内，如果你在 B 型树莓派上编译，一般需要 1 个小时），你会在终端看到如下信息被打印：</p>
-<p><img alt="" src="images/2.3.allbash.png?raw=true" /></p>
+<p><img alt="" src="../images/2.3.allbash.png?raw=true" /></p>
 <p>图 2.3 完成编译后在终端打印的信息</p>
 <p><strong>注意事项</strong> </p>
 <p>在测试 <code>net/http</code> 包时有一个测试会尝试连接 <code>google.com</code>，你可能会看到如下所示的一个无厘头的错误报告：</p>

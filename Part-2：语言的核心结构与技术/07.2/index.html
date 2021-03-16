@@ -2951,7 +2951,7 @@ len(s) &lt;= cap(s)
 <li><code>y[0] = 3</code> 且 <code>y[1] = 5</code>。</li>
 <li>切片 <code>y[0:4]</code> 由 元素 3，5，7 和 11 组成。</li>
 </ul>
-<p><img alt="" src="images/7.2_fig7.2.png?raw=true" /></p>
+<p><img alt="" src="../images/7.2_fig7.2.png?raw=true" /></p>
 <p>示例 7.7 <a href="examples/chapter_7/array_slices.go">array_slices.go</a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
@@ -3030,7 +3030,7 @@ The capacity of slice1 is 4
 <div class="highlight"><pre><span></span><code><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="nb">new</span><span class="p">([</span><span class="mi">100</span><span class="p">]</span><span class="kt">int</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">50</span><span class="p">]</span>
 </code></pre></div>
-<p>下图描述了使用 make 方法生成的切片的内存结构：<img alt="" src="images/7.2_fig7.2.1.png?raw=true" /></p>
+<p>下图描述了使用 make 方法生成的切片的内存结构：<img alt="" src="../images/7.2_fig7.2.1.png?raw=true" /></p>
 <p>示例 7.8 <a href="examples/chapter_7/make_slice.go">make_slice.go</a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
@@ -3075,7 +3075,7 @@ The capacity of slice1 is 10
 <li>make(T) <strong>返回一个类型为 T 的初始值</strong>，它只适用于3种内建的引用类型：切片、map 和 channel（参见第 8 章，第 13 章）。</li>
 </ul>
 <p>换言之，new 函数分配内存，make 函数初始化；下图给出了区别：</p>
-<p><img alt="" src="images/7.2_fig7.3.png?raw=true" /></p>
+<p><img alt="" src="../images/7.2_fig7.3.png?raw=true" /></p>
 <p>在图 7.3 的第一幅图中：</p>
 <div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">p</span> <span class="o">*</span><span class="p">[]</span><span class="kt">int</span> <span class="p">=</span> <span class="nb">new</span><span class="p">([]</span><span class="kt">int</span><span class="p">)</span> <span class="c1">// *p == nil; with len and cap 0</span>
 <span class="nx">p</span> <span class="o">:=</span> <span class="nb">new</span><span class="p">([]</span><span class="kt">int</span><span class="p">)</span>

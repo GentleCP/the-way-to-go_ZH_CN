@@ -2997,7 +2997,7 @@
 <p>而 Go 有一种特殊的类型，<em>通道（channel）</em>，就像一个可以用于发送类型化数据的管道，由其负责协程之间的通信，从而避开所有由共享内存导致的陷阱；这种通过通道进行通信的方式保证了同步性。数据在通道中进行传递：<em>在任何给定时间，一个数据被设计为只有一个协程可以对其访问，所以不会发生数据竞争。</em> 数据的所有权（可以读写数据的能力）也因此被传递。</p>
 <p>工厂的传送带是个很有用的例子。一个机器（生产者协程）在传送带上放置物品，另外一个机器（消费者协程）拿到物品并打包。</p>
 <p>通道服务于通信的两个目的：值的交换，同步的，保证了两个计算（协程）任何时候都是可知状态。</p>
-<p><img alt="" src="images/14.2_fig14.1.png?raw=true" /></p>
+<p><img alt="" src="../images/14.2_fig14.1.png?raw=true" /></p>
 <p>通常使用这样的格式来声明通道：<code>var identifier chan datatype</code></p>
 <p>未初始化的通道的值是nil。</p>
 <p>所以通道只能传输一种类型的数据，比如 <code>chan int</code> 或者 <code>chan string</code>，所有的类型都可以用于通道，空接口 <code>interface{}</code> 也可以。甚至可以（有时非常有用）创建通道的通道。</p>
@@ -3400,7 +3400,7 @@
 </code></pre></div>
 <p>通过使用方向注解来限制协程对通道的操作。</p>
 <p>这里有一个来自 Go 指导的很赞的例子，打印了输出的素数，使用选择器（‘筛’）作为它的算法。每个 prime 都有一个选择器，如下图：</p>
-<p><img alt="" src="images/14.2_fig14.2.png?raw=true" /></p>
+<p><img alt="" src="../images/14.2_fig14.2.png?raw=true" /></p>
 <p>版本1：示例 14.7-<a href="examples/chapter_14/sieve1.go">sieve1.go</a></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Copyright 2009 The Go Authors. All rights reserved.</span>
 <span class="c1">// Use of this source code is governed by a BSD-style</span>

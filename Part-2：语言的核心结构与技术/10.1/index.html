@@ -2925,9 +2925,9 @@ The string is: Chris
 <div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">Point</span> <span class="kd">struct</span> <span class="p">{</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span> <span class="p">}</span>
 </code></pre></div>
 <p>使用 new 初始化：</p>
-<p><img alt="" src="images/10.1_fig10.1-1.jpg?raw=true" /></p>
+<p><img alt="" src="../images/10.1_fig10.1-1.jpg?raw=true" /></p>
 <p>作为结构体字面量初始化：</p>
-<p><img alt="" src="images/10.1_fig10.1-2.jpg?raw=true" /></p>
+<p><img alt="" src="../images/10.1_fig10.1-2.jpg?raw=true" /></p>
 <p>类型 struct1 在定义它的包 pack1 中必须是唯一的，它的完全类型名是：<code>pack1.struct1</code>。</p>
 <p>下面的例子 <a href="examples/chapter_10/person.go">Listing 10.2—person.go</a> 显示了一个结构体 Person，一个方法，方法有一个类型为 <code>*Person</code> 的参数（因此对象本身是可以被改变的），以及三种调用这个方法的不同方式：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">package</span> <span class="nx">main</span>
@@ -2981,11 +2981,11 @@ The name of the person is CHRIS WOODWARD
 <div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">Rect1</span> <span class="kd">struct</span> <span class="p">{</span><span class="nx">Min</span><span class="p">,</span> <span class="nx">Max</span> <span class="nx">Point</span> <span class="p">}</span>
 <span class="kd">type</span> <span class="nx">Rect2</span> <span class="kd">struct</span> <span class="p">{</span><span class="nx">Min</span><span class="p">,</span> <span class="nx">Max</span> <span class="o">*</span><span class="nx">Point</span> <span class="p">}</span>
 </code></pre></div>
-<p><img alt="" src="images/10.1_fig10.2.jpg?raw=true" /></p>
+<p><img alt="" src="../images/10.1_fig10.2.jpg?raw=true" /></p>
 <p><strong>递归结构体</strong></p>
 <p>结构体类型可以通过引用自身来定义。这在定义链表或二叉树的元素（通常叫节点）时特别有用，此时节点包含指向临近节点的链接（地址）。如下所示，链表中的 <code>su</code>，树中的 <code>ri</code> 和 <code>le</code> 分别是指向别的节点的指针。</p>
 <p>链表：</p>
-<p><img alt="" src="images/10.1_fig10.3.jpg?raw=true" /></p>
+<p><img alt="" src="../images/10.1_fig10.3.jpg?raw=true" /></p>
 <p>这块的 <code>data</code> 字段用于存放有效数据（比如 float64），<code>su</code> 指针指向后继节点。</p>
 <p>Go 代码：</p>
 <div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">Node</span> <span class="kd">struct</span> <span class="p">{</span>
@@ -3002,7 +3002,7 @@ The name of the person is CHRIS WOODWARD
 <span class="p">}</span>
 </code></pre></div>
 <p>二叉树：</p>
-<p><img alt="" src="images/10.1_fig10.4.jpg?raw=true" /></p>
+<p><img alt="" src="../images/10.1_fig10.4.jpg?raw=true" /></p>
 <p>二叉树中每个节点最多能链接至两个节点：左节点（le）和右节点（ri），这两个节点本身又可以有左右节点，依次类推。树的顶层节点叫根节点（<strong>root</strong>），底层没有子节点的节点叫叶子节点（<strong>leaves</strong>），叶子节点的 <code>le</code> 和 <code>ri</code> 指针为 nil 值。在 Go 中可以如下定义二叉树：</p>
 <div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">Tree</span> <span class="kd">struct</span> <span class="p">{</span>
     <span class="nx">le</span>      <span class="o">*</span><span class="nx">Tree</span>
